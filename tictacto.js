@@ -57,13 +57,13 @@ function cheakWin(){
 function cheakDraw(){
     if(!isGameOver){
         let isDraw = true;
-        main_grid.classList.add('main-gridone');
         boxes.forEach(e =>{
             if(e.innerHTML ==="") isDraw = false;
             e.style.removeProperty("background-color");
         })
         if(isDraw){
             isGameOver = true;
+             main_grid.classList.add('main-gridone');
             // boxes.style.removeProperty("background-color");
             document.querySelector("#results").innerHTML = " Game Draw!!!";
             document.querySelector("#play-again").style.display = "inline";
