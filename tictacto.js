@@ -1,4 +1,5 @@
 let boxes = document.querySelectorAll(".box");
+var main_grid=document.querySelector('.main-grid');
 
 let turn = "X";
 let isGameOver = false;
@@ -38,6 +39,8 @@ function cheakWin(){
 
         if(v0 != "" && v0 === v1 && v0 === v2){
             isGameOver = true;
+            main_grid.classList.add('main-gridone');
+            // boxes.disabled=true;
             document.querySelector("#results").innerHTML = "Player " + turn + " win \"CONGRATE!!!\"";
             document.querySelector("#play-again").style.display = "inline";
             document.querySelector("#play-again").addEventListener("click", ()=>{
